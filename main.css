@@ -1,21 +1,8 @@
-:root {
-  --green: #80c0a1;
-  --yellow: #f5fccd;
-  --brown: #ff7d66;
-  --black: #000038;
-  --white: #fff;
-  --pink: #eb80b1;
-  --blue: #419197;
-  --dark-blue: #12486b;
-  --orange: orange;
-  --grey: #919ea3;
-  --dark-grey: #66777f;
-}
-
 html {
   font-size: 5vh;
-
-  @media screen and (min-height: 400px) {
+}
+@media screen and (min-height: 400px) {
+  html {
     font-size: 19px;
   }
 }
@@ -25,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--pink);
+  background-color: #eb80b1;
 }
 
 @keyframes swimming {
@@ -46,7 +33,6 @@ body {
     transform: translateX(0) scaleX(-1) skewY(10deg);
   }
 }
-
 @keyframes dead {
   0%,
   100% {
@@ -65,22 +51,19 @@ body {
     transform: translateX(2.5rem) skewY(5deg);
   }
 }
-
 .fishbowl {
   position: relative;
   width: 15rem;
   height: 15rem;
 }
-
 .fishbowl__background {
   position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50% 50% 40% 40%;
-  background: linear-gradient(transparent 10%, var(--white) 150%);
-  border-bottom: 1px solid var(--white);
+  background: linear-gradient(transparent 10%, #fff 150%);
+  border-bottom: 1px solid #fff;
 }
-
 .fishbowl:before {
   content: "";
   position: absolute;
@@ -89,10 +72,9 @@ body {
   width: 100%;
   height: 30%;
   border-radius: 50%;
-  box-shadow: -4rem 10rem 1rem 0 rgba(var(--black), 0.3);
+  box-shadow: -4rem 10rem 1rem 0 rgba(0, 0, 56, 0.3);
   transform: rotate(5deg);
 }
-
 .fishbowl:after {
   content: "";
   position: absolute;
@@ -101,7 +83,7 @@ body {
   width: 95%;
   height: 85%;
   border-radius: 40%;
-  background: linear-gradient(135deg, transparent 50%, var(--white) 150%);
+  background: linear-gradient(135deg, transparent 50%, #fff 150%);
 }
 .fishbowl__bottom {
   position: absolute;
@@ -110,9 +92,8 @@ body {
   width: 65%;
   height: 20%;
   border-radius: 50%;
-  background: linear-gradient(var(--yellow), var(--brown) 200%);
+  background: linear-gradient(#f5fccd, #ff7d66 200%);
 }
-
 .fishbowl__decoration {
   position: absolute;
   top: 20%;
@@ -120,31 +101,29 @@ body {
   width: 90%;
   height: 75%;
 }
-
 .fishbowl__seaweed {
   position: absolute;
   width: 0;
   height: 0;
   border-left: 0.5rem solid transparent;
   border-right: 0.5rem solid transparent;
-  border-bottom: 5rem solid var(--green);
+  border-bottom: 5rem solid #80c0a1;
 }
-
 .fishbowl__seaweed--1 {
   bottom: 15%;
   right: 20%;
+  border-bottom: 5rem solid #80c0a1;
 }
-
 .fishbowl__seaweed--2 {
   bottom: 10%;
   right: 30%;
+  border-bottom: 8rem solid #80c0a1;
 }
-
 .fishbowl__seaweed--3 {
   bottom: 15%;
   right: 40%;
+  border-bottom: 6rem solid #80c0a1;
 }
-
 .fishbowl__water {
   position: absolute;
   bottom: 5%;
@@ -155,18 +134,16 @@ body {
   transition: height 0.3s ease;
   overflow: hidden;
 }
-
 .fishbowl__water-color {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: calc(1% * var(--filling, 90));
-  background: linear-gradient(transparent -50%, var(--blue) 250%);
+  background: linear-gradient(transparent -50%, #419197 250%);
   border-radius: 20% 20% 4rem 4rem;
   transition: height 0.5s linear;
 }
-
 .fishbowl__water-color:after {
   content: "";
   position: absolute;
@@ -175,10 +152,9 @@ body {
   width: 90%;
   height: 3rem;
   border-radius: 50%;
-  background: linear-gradient(transparent 0%, var(--blue) 250%);
-  box-shadow: inset 0 -1px 0 0 rgba(var(--white), 0.5);
+  background: linear-gradient(transparent 0%, #419197 250%);
+  box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.5);
 }
-
 .fishbowl__top {
   position: absolute;
   top: 5%;
@@ -186,9 +162,8 @@ body {
   width: 70%;
   height: 20%;
   border-radius: 50%;
-  box-shadow: 0 2px 2px 3px rgba(var(--white), 0.3);
+  box-shadow: 0 2px 2px 3px rgba(255, 255, 255, 0.3);
 }
-
 .fishbowl__fish {
   position: absolute;
   bottom: 25%;
@@ -196,8 +171,8 @@ body {
   width: 2rem;
   height: 1rem;
   border-radius: 50%;
-  background: linear-gradient(var(--white) -200%, var(--orange));
-  box-shadow: 0 2rem 4px -2px rgba(var(--black), 0.3);
+  background: linear-gradient(#fff -200%, orange);
+  box-shadow: 0 2rem 4px -2px rgba(0, 0, 56, 0.3);
   transition-property: bottom, transform, box-shadow;
   transition-duration: 1s;
   transition-timing-function: ease;
@@ -206,7 +181,6 @@ body {
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 }
-
 .fishbowl__fish:after {
   content: "";
   position: absolute;
@@ -215,19 +189,16 @@ body {
   width: 0.25rem;
   height: 0.25rem;
   border-radius: 50%;
-  background: radial-gradient(
-    circle at 0 0,
-    var(--white) -100%,
-    var(--dark-blue)
-  );
+  background: radial-gradient(circle at 0 0, #fff -100%, #12486b);
   transition: height 0.5s ease;
 }
-
 .fishbowl__fish--dying {
   bottom: 10%;
-  box-shadow: 0 1rem 4px -2px rgba(var(--black), 0.3);
+  box-shadow: 0 1rem 4px -2px rgba(0, 0, 56, 0.3);
 }
-
+.fishbowl__fish--dying .fishbowl__fish-tail {
+  box-shadow: 0 1rem 4px -2px rgba(0, 0, 56, 0.3);
+}
 .fishbowl__fish--dead {
   animation: dead;
   animation-duration: 2s;
@@ -235,22 +206,24 @@ body {
   animation-fill-mode: forwards;
   box-shadow: none;
 }
-
+.fishbowl__fish--dead .fishbowl__fish-tail {
+  box-shadow: none;
+}
 .fishbowl__fish--dead:after {
   height: 0.125rem;
 }
-
 .fishbowl__fish--floating {
   bottom: max(calc(var(--filling, 0) * 1% - 15%), 10%);
   transform: translateX(2.5rem);
   animation: none;
   box-shadow: none;
 }
-
 .fishbowl__fish--floating:after {
   height: 2px;
 }
-
+.fishbowl__fish--floating .fishbowl__fish-tail {
+  box-shadow: none;
+}
 .fishbowl__fish-tail {
   position: absolute;
   top: 0;
@@ -259,11 +232,10 @@ body {
   height: 0;
   border-top: 0.5rem solid transparent;
   border-bottom: 0.5rem solid transparent;
-  border-left: 0.94rem solid var(--orange);
-  box-shadow: 0 2rem 4px -2px rgba(var(--black), 0.3);
+  border-left: 0.94rem solid orange;
+  box-shadow: 0 2rem 4px -2px rgba(0, 0, 56, 0.3);
   transition: box-shadow 1s ease;
 }
-
 .fishbowl__pool {
   position: absolute;
   right: 0;
@@ -271,10 +243,9 @@ body {
   width: 50%;
   height: 15%;
   border-radius: 50%;
-  background: linear-gradient(var(--white) -100%, var(--blue));
+  background: linear-gradient(#fff -100%, #419197);
   opacity: 0.5;
 }
-
 .fishbowl__pool:after {
   content: "";
   position: absolute;
@@ -282,14 +253,13 @@ body {
   left: 25%;
   width: 50%;
   height: 50%;
-  border-right: 2px solid var(--white);
+  border-right: 2px solid #fff;
   border-radius: 50%;
   animation: wave;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   opacity: 0.5;
 }
-
 @keyframes wave {
   from {
     top: 25%;
@@ -304,7 +274,6 @@ body {
     height: 80%;
   }
 }
-
 .fishbowl__tap {
   position: absolute;
   bottom: 0;
@@ -313,17 +282,35 @@ body {
   height: 15.9rem;
   cursor: pointer;
 }
-
 .fishbowl__tap--active .fishbowl__tap-stream {
   animation: stream;
   animation-duration: 0.5s;
 }
-
+@keyframes stream {
+  0% {
+    height: 0;
+  }
+  50% {
+    top: 2rem;
+    height: calc(14rem - var(--filling) * 0.1rem);
+  }
+  100% {
+    top: calc(2rem + 14rem - var(--filling) * 0.1rem);
+    height: 0;
+  }
+}
 .fishbowl__tap--active .fishbowl__tap-handle {
   animation: handle;
   animation-duration: 0.5s;
 }
-
+@keyframes handle {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
 .fishbowl__tap-base {
   position: absolute;
   bottom: 0;
@@ -331,10 +318,9 @@ body {
   width: 2rem;
   height: 14rem;
   border-radius: 0 0 1.2rem 1.2rem;
-  box-shadow: inset -1px -1px 0 0px rgba(var(--white), 0.5);
-  background: linear-gradient(var(--grey), var(--dark-grey) 150%);
+  box-shadow: inset -1px -1px 0 0px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(#919ea3, #66777f 150%);
 }
-
 .fishbowl__tap-base:before {
   content: "";
   position: absolute;
@@ -344,10 +330,9 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 1rem 1rem 0 0;
-  box-shadow: -4rem 10rem 1rem 0 rgba(var(--black), 0.3);
+  box-shadow: -4rem 10rem 1rem 0 rgba(0, 0, 56, 0.3);
   transform: rotate(-70deg);
 }
-
 .fishbowl__tap-base:after {
   content: "";
   position: absolute;
@@ -358,12 +343,11 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(var(--white), 0.4) 60%,
+    rgba(255, 255, 255, 0.4) 60%,
     transparent 200%
   );
   border-radius: 0 0 1.2rem 1.2rem;
 }
-
 .fishbowl__tap-handle {
   position: absolute;
   left: -1rem;
@@ -371,12 +355,11 @@ body {
   width: 2rem;
   height: 2rem;
   border-radius: 0.2rem;
-  border-top: 1px solid var(--white);
-  border-right: 1px solid rgba(var(--white), 0.5);
-  background: radial-gradient(circle at 0 0, var(--white) -100%, var(--grey));
+  border-top: 1px solid #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  background: radial-gradient(circle at 0 0, #fff -100%, #919ea3);
   transform: rotate(45deg);
 }
-
 .fishbowl__tap-handle:after {
   content: "";
   position: absolute;
@@ -385,20 +368,18 @@ body {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background: radial-gradient(circle at 0 0, var(--white) -200%, var(--blue));
+  background: radial-gradient(circle at 0 0, #fff -200%, #419197);
 }
-
 .fishbowl__tap-stream {
   position: absolute;
   top: 2rem;
   left: 6.25rem;
   width: 1.5rem;
   height: 0;
-  background: linear-gradient(var(--white) -100%, var(--blue));
+  background: linear-gradient(#fff -100%, #419197);
   border-radius: 1rem;
   opacity: 0.3;
 }
-
 .fishbowl__tap-head {
   position: absolute;
   top: 0;
@@ -406,12 +387,11 @@ body {
   width: 4rem;
   height: 0rem;
   border-radius: 50% 50% 0 0;
-  border-top: 2rem solid var(--grey);
-  border-left: 2rem solid var(--grey);
-  border-right: 2rem solid var(--grey);
-  box-shadow: 1px -1px 0 0 var(--white);
+  border-top: 2rem solid #919ea3;
+  border-left: 2rem solid #919ea3;
+  border-right: 2rem solid #919ea3;
+  box-shadow: 1px -1px 0 0 #fff;
 }
-
 .fishbowl__tap-head:before {
   content: "";
   position: absolute;
@@ -420,10 +400,9 @@ body {
   right: 23rem;
   width: 150%;
   height: 200%;
-  box-shadow: -4rem 10rem 1rem 1rem rgba(var(--black), 0.3);
+  box-shadow: -4rem 10rem 1rem 1rem rgba(0, 0, 56, 0.3);
   transform: rotate(2deg) skewX(60deg);
 }
-
 .fishbowl__tap-head:after {
   content: "";
   position: absolute;
@@ -433,12 +412,11 @@ body {
   height: 2rem;
   background: linear-gradient(
     transparent,
-    rgba(var(--white), 0.4) 60%,
+    rgba(255, 255, 255, 0.4) 60%,
     transparent 200%
   );
   border-radius: 50% 50% 0 50%;
 }
-
 .fishbowl__tap-end {
   position: absolute;
   left: 6rem;
@@ -446,18 +424,16 @@ body {
   width: 2rem;
   height: 1rem;
   border-radius: 50%;
-  background: linear-gradient(var(--white) -70%, var(--grey));
+  background: linear-gradient(#fff -70%, #919ea3);
 }
-
 .fishbowl__tap-text {
   position: absolute;
   top: 4rem;
   left: -6rem;
-  color: var(--white);
+  color: #fff;
   font-family: "Arial", sans-serif;
   font-size: 0.875rem;
 }
-
 .fishbowl__tap-text:after {
   content: "";
   position: absolute;
@@ -465,15 +441,13 @@ body {
   right: -1rem;
   width: 2rem;
   height: 1px;
-  background-color: var(--white);
+  background-color: #fff;
   transform: rotate(45deg);
 }
-
 @media screen and (max-width: 420px) {
   .fishbowl {
     left: 13%;
   }
-
   .fishbowl__tap-text {
     width: 2rem;
     top: 1rem;
